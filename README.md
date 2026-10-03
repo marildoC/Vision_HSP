@@ -12,7 +12,7 @@
 
 ## Overview
 
-**Vision HSP** is a streaming computer vision system for real-time person detection, tracking, and identity-conditioned privacy enforcement. The pipeline detects persons via YOLO, tracks them with an OC-SORT association engine, resolves identity through face embedding search against an encrypted gallery, and produces a **delayed, redacted output stream** in which authorized individuals are masked while unknowns remain fully visible.
+**Vision HSP** is a streaming computer vision system for real-time person detection, tracking, and identity-conditioned privacy enforcement. The pipeline detects persons via YOLO, tracks them with an OC-SORT association engine, resolves identity through face embedding search against an encrypted gallery, and produces a **delayed, redacted output stream** in which authorized individuals are masked while unknowns remain fully visible. 
 
 The system enforces a **fail-closed privacy policy**: once a person is identified as authorized, redaction locks on and cannot be reversed by a single-frame misclassification. A configurable delay buffer (default 3 seconds) ensures that no frame is ever written before the identity engine has had sufficient time to reach a decision.
 
